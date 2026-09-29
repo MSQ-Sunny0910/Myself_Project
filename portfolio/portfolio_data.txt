@@ -1,22 +1,18 @@
 {
   "person": {
-    "name": "马思琪",
+    "name": "马某某",
     "job": "AI产品经理",
-    "school": "北京师范大学珠海分校 · 计算机科学与技术本科 GPA3.3（专业前20/120）",
+    "school": "-- · 计算机科学与技术本科 GPA3.3（专业前20/120）",
     "major": "计算机科学与技术",
-    "phone": "19538744702",
-    "email": "sunny_msq@foxmail.com",
-    "honors": [
-      "北京师范大学珠海分校 优秀团员、优秀学生干部",
-      "信息技术学院第十八届IT节作品赛 三等奖",
-      "北京师范大学珠海分校信息技术学院 专业三等奖学金"
-    ],
+    "phone": "195***4702",
+    "email": "su***@foxmail.com",
+    "honors": [],
     "intro": "本人拥有扎实的AI项目落地能力，曾主导G端产品“小散工程”项目下的多业态AI项目从0-1的搭建、B端AI知识问答+知识库系统项目，擅长需求调研、方案设计与跨团队协调。能够通过VibeCoding搭建项目原型、RAG知识库的搭建、Python插件、Agent开发等技术，实现AI系统从方案到落地的全流程推进，覆盖安全检测、数据问答、知识库问答、审核提效、知识库管理等多场景，成果获政府与行业认可。同时具备数据运维经验，能快速理解业务需求，结合Mysql、MongoDB等数据库操作与Excel函数，高效处理千万级数据并输出解决方案。"
   },
   "companies": [
     {
       "id": 2,
-      "name": "上海前程众程人力资源有限公司深圳分公司（招商信诺人寿保险有限公司）",
+      "name": "上海前程众程人力资源有限公司深圳分公司（-）",
       "position": "AI项目主管（AI产品经理 B端）",
       "work": "深入调研保险业务一线痛点，结合市场趋势输出AI产品需求，主导“保单查询-催办”、“保全试算”、“优化知识库”等功能的PRD编写及跨系统接口方案设计；统筹项目从立项到上线验收的全流程管理，协调研发、测试及业务资源，对接7个业务系统，推动数据与功能集成至i小诺AI问答平台，实现对话场景业务闭环；负责知识库系统的日常运维与功能优化，基于业务反馈评估需求优先级，落地批量上传、文件全链路跟踪等功能，持续提升系统能力与使用效率。",
       "start": "2026.01",
@@ -49,9 +45,7 @@
       "detail": "#",
       "start": "2026.01",
       "end": "2026.09",
-      "images": [
-        "https://placehold.co/800x600/e6f3fc/2377b9?text=i小诺+-1"
-      ]
+      "images": []
     },
     {
       "id": 2,
@@ -68,9 +62,7 @@
       "detail": "#",
       "start": "2026.01",
       "end": "2026.09",
-      "images": [
-        "https://placehold.co/800x600/e6f3fc/2377b9?text=知识库-1"
-      ]
+      "images": []
     },
     {
       "id": 3,
@@ -86,9 +78,7 @@
       "detail": "https://www.sznews.com/news/content/mb/2025-04/08/content_31530759.htm",
       "start": "2025.01",
       "end": "2025.03",
-      "images": [
-        "https://placehold.co/800x600/e6f3fc/2377b9?text=巡检AI-1"
-      ]
+      "images": []
     },
     {
       "id": 4,
@@ -105,9 +95,7 @@
       "detail": "#",
       "start": "2024.05",
       "end": "2024.12",
-      "images": [
-        "https://placehold.co/800x600/e6f3fc/2377b9?text=数据问答-1"
-      ]
+      "images": []
     },
     {
       "id": 5,
@@ -123,9 +111,7 @@
       "detail": "https://www.szft.gov.cn/bmxx/qjsj/gzdt/content/post_12138964.html",
       "start": "2024.05",
       "end": "2025.01",
-      "images": [
-        "https://placehold.co/800x600/e6f3fc/2377b9?text=备案审核-1"
-      ]
+      "images": []
     },
     {
       "id": 6,
@@ -141,9 +127,7 @@
       "detail": "#",
       "start": "2024.04",
       "end": "2024.06",
-      "images": [
-        "https://placehold.co/800x600/e6f3fc/2377b9?text=业务问答-1"
-      ]
+      "images": []
     }
   ],
   "companyProjects": [
