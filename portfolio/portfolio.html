@@ -381,9 +381,10 @@
 let DATA = {};
 
 function loadData() {
-  return fetch("portfolio_data.txt")
+  const dataUrl = new URL("portfolio_data.txt", window.location.href).href;
+  return fetch(dataUrl)
     .then(res => {
-      if (!res.ok) throw new Error("无法加载 portfolio_data.txt");
+      if (!res.ok) throw new Error(`无法加载 ${dataUrl} (HTTP ${res.status})`);
       return res.text();
     })
     .then(text => {
@@ -393,7 +394,7 @@ function loadData() {
     .catch(err => {
       console.error(err);
       document.getElementById("view-company").innerHTML =
-        `<p style="color:#c00;padding:20px;">数据加载失败：${err.message}<br>请确认 portfolio_data.txt 与 portfolio.html 在同一目录。</p>`;
+        `<p style="color:#c00;padding:20px;">数据加载失败：${err.message}<br>请确认 portfolio_data.txt 与 portfolio.html 在同一目录，并刷新重试。</p>`;
     });
 }
 
