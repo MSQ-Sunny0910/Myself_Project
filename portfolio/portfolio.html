@@ -381,8 +381,8 @@
 let DATA = {};
 
 function loadData() {
-  const dataUrl = new URL("portfolio_data.txt", window.location.href).href;
-  return fetch(dataUrl)
+  const dataUrl = new URL(`portfolio_data.txt?v=${Date.now()}`, window.location.href).href;
+  return fetch(dataUrl, { cache: "no-store" })
     .then(res => {
       if (!res.ok) throw new Error(`无法加载 ${dataUrl} (HTTP ${res.status})`);
       return res.text();
