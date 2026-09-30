@@ -169,10 +169,5 @@
     }
   ],
   "skills": [
-    "能够使用 DeepSeek、Qwen、Kimi 等平台进行 Vibe Coding，快速搭建系统 Demo",
-    "熟练使用 RPA、Python 处理数据、编写插件和代码块支撑 AI 工作流运转",
-    "熟悉 MCP、RAG 技术，能够熟练搭建工作流、编写 AI 提示词",
-    "熟练操作 Mysql、SQLServer、MongoDB 等数据库，能高效处理千万级数据并输出解决方案",
-    "能够阅读英文文档，具备良好的技术调研能力，善于利用不同工具辅助学习"
-  ]
+]
 }
