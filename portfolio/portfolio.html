@@ -3,6 +3,9 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+<meta http-equiv="Pragma" content="no-cache">
+<meta http-equiv="Expires" content="0">
 <title>马思琪 · 个人作品集</title>
 <link rel="preconnect" href="https://cdn.jsdelivr.net">
 <link href="https://cdn.jsdelivr.net/npm/inter-ui@3.19.3/inter.css" rel="stylesheet">
@@ -241,9 +244,14 @@
     color: var(--primary); font-size: 13px; flex-shrink: 0;
     overflow: hidden; position: relative; cursor: pointer;
   }
-  .p-thumb img { width: 100%; height: 100%; object-fit: cover; }
+  .p-thumb img {
+    width: 100%; height: 100%; object-fit: cover;
+    position: absolute; top: 0; left: 0;
+    opacity: 0; transition: opacity 0.5s ease;
+  }
+  .p-thumb img.active { opacity: 1; }
   .p-thumb-count {
-    position: absolute; bottom: 10px; right: 10px;
+    position: absolute; bottom: 10px; right: 10px; z-index: 2;
     background: rgba(24, 50, 75, 0.75); color: #fff;
     padding: 3px 10px; border-radius: 999px;
     font-size: 12px; font-weight: 500;
@@ -390,6 +398,7 @@ function loadData() {
     .then(text => {
       DATA = JSON.parse(text);
       render();
+      startThumbCarousel();
     })
     .catch(err => {
       console.error(err);
@@ -417,11 +426,28 @@ function renderThumb(p) {
   const imgs = p.images || [];
   if (!imgs.length) return "";
   const badge = imgs.length > 1 ? `<span class="p-thumb-count">共 ${imgs.length} 张</span>` : "";
+  const slides = imgs.map((src, idx) =>
+    `<img src="${src}" alt="${p.name}" class="thumb-slide ${idx === 0 ? 'active' : ''}" data-index="${idx}">`
+  ).join("");
   return `
   <div class="p-thumb" onclick="openLightbox(event, ${p.id}, 0)">
-    <img src="${imgs[0]}" alt="${p.name}">
+    ${slides}
     ${badge}
   </div>`;
+}
+
+function startThumbCarousel() {
+  setInterval(() => {
+    document.querySelectorAll(".p-thumb").forEach(container => {
+      const slides = container.querySelectorAll(".thumb-slide");
+      if (slides.length <= 1) return;
+      let activeIdx = 0;
+      slides.forEach((s, i) => { if (s.classList.contains("active")) activeIdx = i; });
+      slides[activeIdx].classList.remove("active");
+      const nextIdx = (activeIdx + 1) % slides.length;
+      slides[nextIdx].classList.add("active");
+    });
+  }, 2000);
 }
 
 function renderDetailLink(p) {
@@ -567,7 +593,13 @@ function openLightbox(event, projectId, index) {
   event.stopPropagation();
   const p = DATA.projects.find(x => x.id === projectId);
   if (!p || !p.images || !p.images.length) return;
-  lightboxState = { projectId, index: Math.max(0, Math.min(index, p.images.length - 1)) };
+  const container = event.currentTarget.closest(".p-thumb");
+  let startIndex = index;
+  if (container) {
+    const active = container.querySelector(".thumb-slide.active");
+    if (active) startIndex = parseInt(active.dataset.index || "0", 10);
+  }
+  lightboxState = { projectId, index: Math.max(0, Math.min(startIndex, p.images.length - 1)) };
   updateLightbox();
   document.getElementById("lightbox").classList.add("active");
   document.body.style.overflow = "hidden";
