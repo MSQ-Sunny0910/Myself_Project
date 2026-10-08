@@ -237,6 +237,9 @@
   }
   .field-value { font-size: 15px; color: var(--text); line-height: 1.7; padding-left: 11px; }
   .field-value.result { color: var(--success); font-weight: 500; }
+  .field-value strong,
+  .company-work strong,
+  .intro strong { color: var(--title); font-weight: 700; }
   .p-thumb {
     width: 310px; height: 196px; border-radius: var(--radius-sm);
     background: var(--priority-bg);
@@ -297,6 +300,16 @@
   }
 
   /* ========== 响应式 ========== */
+  /* iPad 及以下：适度缩小时间线 */
+  @media (max-width: 1024px) {
+    .tl-left { width: 28px; }
+    .tl-marker { width: 20px; height: 20px; }
+    .tl-marker::after { width: 7px; height: 7px; }
+    .tl-line { left: 50%; }
+    .tl-item { gap: 16px; }
+  }
+
+  /* 移动端：进一步压缩时间线 */
   @media (max-width: 768px) {
     .header-inner { flex-direction: column; align-items: center; text-align: center; }
     .info-row { justify-content: center; }
@@ -309,6 +322,16 @@
     .lightbox-prev { left: 10px; }
     .lightbox-next { right: 10px; }
     .lightbox-close { top: 10px; right: 10px; }
+
+    .tl-left { width: 20px; }
+    .tl-marker { width: 14px; height: 14px; }
+    .tl-marker::after { width: 5px; height: 5px; }
+    .tl-line { width: 1px; left: 50%; }
+    .tl-item { gap: 12px; }
+    .tl-right { padding-bottom: 20px; }
+    .project-card { padding: 18px; }
+    .company-name { font-size: 18px; }
+    .p-name { font-size: 16px; }
   }
 </style>
 </head>
@@ -407,6 +430,17 @@ function loadData() {
     });
 }
 
+/* 简单 Markdown 支持：加粗 **文本** + 换行 */
+function mdToHtml(text) {
+  if (!text) return "";
+  return String(text)
+    .replace(/&/g, "&amp;")
+    .replace(/</g, "&lt;")
+    .replace(/>/g, "&gt;")
+    .replace(/\*\*(.+?)\*\*/g, "<strong>$1</strong>")
+    .replace(/\n/g, "<br>");
+}
+
 /* 工具函数 */
 function priorityLabel(priority) {
   if (priority === 1) return "P0 核心项目";
@@ -480,9 +514,9 @@ function projectCard(cp, isLast) {
     <div class="project-body">
       <div class="project-body-inner">
         <div class="p-fields">
-          <div class="field"><div class="field-label">项目背景</div><div class="field-value">${p.background}</div></div>
-          <div class="field"><div class="field-label">工作内容</div><div class="field-value">${p.responsibility}</div></div>
-          <div class="field"><div class="field-label">关键成果 / 数据</div><div class="field-value result">${p.achievement}</div></div>
+          <div class="field"><div class="field-label">项目背景</div><div class="field-value">${mdToHtml(p.background)}</div></div>
+          <div class="field"><div class="field-label">工作内容</div><div class="field-value">${mdToHtml(p.responsibility)}</div></div>
+          <div class="field"><div class="field-label">关键成果 / 数据</div><div class="field-value result">${mdToHtml(p.achievement)}</div></div>
           ${renderDetailLink(p)}
         </div>
         ${renderThumb(p)}
@@ -509,7 +543,7 @@ function renderCompany() {
               <span class="company-time">${c.start} - ${c.end}</span>
             </div>
             <div class="company-pos">${c.position}</div>
-            <div class="company-work">${c.work}</div>
+            <div class="company-work">${mdToHtml(c.work)}</div>
           </div>
           <div class="company-projects">${cps.map((cp, i) => projectCard(cp, i === cps.length - 1 && isLast)).join("")}</div>
         </div>
@@ -554,7 +588,7 @@ function render() {
   document.getElementById("p-school").textContent = per.school;
   document.getElementById("p-phone").textContent = per.phone;
   document.getElementById("p-email").textContent = per.email;
-  document.getElementById("p-intro").textContent = per.intro;
+  document.getElementById("p-intro").innerHTML = mdToHtml(per.intro);
 
   const honors = per.honors || [];
   document.getElementById("p-honors").innerHTML = honors.length
