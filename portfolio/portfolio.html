@@ -206,6 +206,9 @@
   .p-role {
     font-size: 14px; color: var(--muted); margin-top: 6px;
   }
+  .p-company {
+    font-size: 13px; color: var(--muted); font-weight: 400; margin-left: 6px;
+  }
   .p-meta-right {
     display: flex; align-items: center; gap: 12px; flex-shrink: 0;
   }
@@ -490,17 +493,19 @@ function renderDetailLink(p) {
   return `<a class="p-link" href="${detail}" target="_blank" rel="noopener">查看项目详情 ↗</a>`;
 }
 
-function projectCard(cp, isLast) {
+function projectCard(cp, isLast, showCompany) {
   const p = DATA.projects.find(x => x.id === cp.projectId);
+  const c = DATA.companies.find(x => x.id === cp.companyId);
   const kws = p.keywords.map(k => `<span class="tag tag-keyword">${k}</span>`).join("");
   const timeRole = `${projectTime(p)} · ${cp.role}`;
+  const companyTag = (showCompany && c) ? `<span class="p-company">· ${c.name}</span>` : "";
   return `
   <div class="project-card open" onclick="toggleProject(event, this)">
     <div class="project-head">
       <div class="project-summary">
         <div>
           <div class="project-title-row">
-            <span class="p-name">${p.name}</span>
+            <span class="p-name">${p.name}</span>${companyTag}
             <span class="tag tag-priority">${priorityLabel(cp.priority)}</span>
           </div>
           <div class="p-role">${timeRole}</div>
@@ -545,7 +550,7 @@ function renderCompany() {
             <div class="company-pos">${c.position}</div>
             <div class="company-work">${mdToHtml(c.work)}</div>
           </div>
-          <div class="company-projects">${cps.map((cp, i) => projectCard(cp, i === cps.length - 1 && isLast)).join("")}</div>
+          <div class="company-projects">${cps.map((cp, i) => projectCard(cp, i === cps.length - 1 && isLast, false)).join("")}</div>
         </div>
       </div>`;
     }).join("");
@@ -573,7 +578,7 @@ function renderProject() {
         <div class="tl-left"><div class="tl-marker"></div><div class="tl-line"></div></div>
         <div class="tl-right">
           <div class="tl-time">${projectTime(p)}</div>
-          ${projectCard(cp, false)}
+          ${projectCard(cp, false, true)}
         </div>
       </div>`);
     });
