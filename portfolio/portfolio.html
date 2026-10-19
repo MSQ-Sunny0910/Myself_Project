@@ -243,11 +243,13 @@
   .company-work strong,
   .intro strong { color: var(--title); font-weight: 700; }
   .p-thumb {
-    width: 310px; height: 196px; border-radius: var(--radius-sm);
+    width: 310px; min-height: 120px; max-height: 420px;
+    border-radius: var(--radius-sm);
     background: var(--priority-bg);
     display: flex; align-items: center; justify-content: center;
     color: var(--primary); font-size: 13px; flex-shrink: 0;
     overflow: hidden; position: relative; cursor: pointer;
+    transition: height 0.3s ease;
   }
   .p-thumb img {
     max-width: 100%; max-height: 100%; object-fit: contain;
@@ -427,7 +429,6 @@ function loadData() {
     .then(text => {
       DATA = JSON.parse(text);
       render();
-      startThumbCarousel();
     })
     .catch(err => {
       console.error(err);
@@ -482,6 +483,25 @@ function startThumbCarousel() {
       slides[nextIdx].classList.add("active");
     });
   }, 2000);
+}
+
+function adjustThumbSizes() {
+  document.querySelectorAll(".p-thumb").forEach(container => {
+    const img = container.querySelector(".thumb-slide.active") || container.querySelector(".thumb-slide");
+    if (!img) return;
+    const setHeight = () => {
+      if (!img.naturalWidth || !img.naturalHeight) return;
+      const ratio = img.naturalHeight / img.naturalWidth;
+      let h = 310 * ratio;
+      h = Math.max(120, Math.min(420, h));
+      container.style.height = h + "px";
+    };
+    if (img.complete && img.naturalWidth) {
+      setHeight();
+    } else {
+      img.onload = setHeight;
+    }
+  });
 }
 
 function renderDetailLink(p) {
@@ -621,6 +641,7 @@ function render() {
 
   renderCompany();
   renderProject();
+  setTimeout(() => { adjustThumbSizes(); startThumbCarousel(); }, 0);
 }
 
 function toggleProject(e, el) {
