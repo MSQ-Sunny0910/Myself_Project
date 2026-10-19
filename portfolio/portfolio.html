@@ -342,7 +342,7 @@
 
 <header class="site-header">
   <div class="header-inner">
-    <div class="avatar" id="avatar">马</div>
+    <div class="avatar" id="avatar"></div>
     <div class="header-content">
       <h1 class="name" id="p-name">马思琪</h1>
       <div class="job" id="p-job">AIGC 产品经理 / AI 项目经理</div>
@@ -586,8 +586,19 @@ function renderProject() {
   document.getElementById("view-project").innerHTML = `<div class="timeline project-timeline">${items.join("")}</div>`;
 }
 
+function renderAvatar(per) {
+  const avatarEl = document.getElementById("avatar");
+  const initial = per.name ? per.name.charAt(0) : "";
+  if (per.avatar && per.avatar.trim()) {
+    avatarEl.innerHTML = `<img src="${per.avatar}" alt="${per.name || ''}" onerror="this.parentElement.textContent='${initial}'">`;
+  } else {
+    avatarEl.textContent = initial;
+  }
+}
+
 function render() {
   const per = DATA.person;
+  renderAvatar(per);
   document.getElementById("p-name").textContent = per.name;
   document.getElementById("p-job").textContent = per.job;
   document.getElementById("p-school").textContent = per.school;
