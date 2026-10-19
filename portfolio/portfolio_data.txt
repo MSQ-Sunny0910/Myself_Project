@@ -1,7 +1,7 @@
 {
   "person": {
     "name": "马思琪",
-    "avatar": "https://yft.fdpc.xyz/eyJmaWxlX2lkIjoiQlFBQ0FnVUFBeUVHQUFNQkE4T1hfZ0FDQ2ZkcTFjZHA2RHBNNmEyWi1xWkc3RlJkTEVvRjBBQUN1Q2NBQXJEV3NWYTBvN3JhTDEzWnl6MEUiLCJtZXNzYWdlX2lkIjoyNTUxfQ.png",
+    "avatar": "https://yft.fdpc.xyz/eyJmaWxlX2lkIjoiQlFBQ0FnVUFBeUVHQUFNQkE4T1hfZ0FDQ2ZocTFjbWJya0ZQZHItZ3duUmhicEx4azFPZ3FBQUN2eWNBQXJEV3NWWjliemZ0MWdZMUh6MEUiLCJtZXNzYWdlX2lkIjoyNTUyfQ.png",
     "job": "AI产品经理",
     "school": "北京师范大学珠海分校 · 计算机科学与技术本科 GPA3.3（专业前20/120）",
     "major": "计算机科学与技术",
