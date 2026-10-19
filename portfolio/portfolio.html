@@ -201,7 +201,6 @@
     padding: 4px 12px; border-radius: 6px;
     font-size: 13px; font-weight: 600;
   }
-  .tag-priority { background: var(--priority-bg); color: var(--priority-text); }
   .tag-keyword { background: var(--keyword-bg); color: var(--keyword-text); }
   .p-role {
     font-size: 14px; color: var(--muted); margin-top: 6px;
@@ -251,7 +250,7 @@
     overflow: hidden; position: relative; cursor: pointer;
   }
   .p-thumb img {
-    width: 100%; height: 100%; object-fit: cover;
+    max-width: 100%; max-height: 100%; object-fit: contain;
     position: absolute; top: 0; left: 0;
     opacity: 0; transition: opacity 0.5s ease;
   }
@@ -445,12 +444,6 @@ function mdToHtml(text) {
 }
 
 /* 工具函数 */
-function priorityLabel(priority) {
-  if (priority === 1) return "P0 核心项目";
-  if (priority === 2) return "P1 重点项目";
-  return "P2 参与项目";
-}
-
 function projectTime(p) {
   return `${p.start} - ${p.end}`;
 }
@@ -506,7 +499,6 @@ function projectCard(cp, isLast, showCompany) {
         <div>
           <div class="project-title-row">
             <span class="p-name">${p.name}</span>${companyTag}
-            <span class="tag tag-priority">${priorityLabel(cp.priority)}</span>
           </div>
           <div class="p-role">${timeRole}</div>
         </div>
@@ -536,7 +528,11 @@ function renderCompany() {
     .map((c, idx, arr) => {
       const cps = DATA.companyProjects
         .filter(cp => cp.companyId === c.id)
-        .sort((a, b) => a.priority - b.priority);
+        .sort((a, b) => {
+          const pa = DATA.projects.find(x => x.id === a.projectId);
+          const pb = DATA.projects.find(x => x.id === b.projectId);
+          return pb.start.localeCompare(pa.start);
+        });
       const isLast = idx === arr.length - 1;
       return `
       <div class="tl-item">
