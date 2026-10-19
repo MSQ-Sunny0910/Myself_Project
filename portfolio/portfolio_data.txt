@@ -7,11 +7,7 @@
     "major": "计算机科学与技术",
     "phone": "19538744702",
     "email": "sunny_msq@foxmail.com",
-    "honors": [
-      "北京师范大学珠海分校 优秀团员、优秀学生干部",
-      "信息技术学院第十八届IT节作品赛 三等奖",
-      "北京师范大学珠海分校信息技术学院 专业三等奖学金"
-    ],
+    "honors": [ ],
     "intro": "本人拥有扎实的AI项目落地能力，曾主导G端产品“小散工程”项目下的多业态AI项目从0-1的搭建、B端AI知识问答+知识库系统项目，擅长需求调研、方案设计与跨团队协调。能够通过VibeCoding搭建项目原型、RAG知识库的搭建、Python插件、Agent开发等技术，实现AI系统从方案到落地的全流程推进，覆盖安全检测、数据问答、知识库问答、审核提效、知识库管理等多场景，成果获政府与行业认可。同时具备数据运维经验，能快速理解业务需求，结合Mysql、MongoDB等数据库操作与Excel函数，高效处理千万级数据并输出解决方案。"
   },
   "companies": [
@@ -19,7 +15,7 @@
       "id": 2,
       "name": "上海前程众程人力资源有限公司深圳分公司（招商信诺人寿保险有限公司）",
       "position": "AI项目主管（AI产品经理 B端）",
-      "work": "深入调研保险业务一线痛点，结合市场趋势输出AI产品需求，主导“保单查询-催办”、“保全试算”、“优化知识库”等功能的PRD编写及跨系统接口方案设计；统筹项目从立项到上线验收的全流程管理，协调研发、测试及业务资源，对接7个业务系统，推动数据与功能集成至i小诺AI问答平台，实现对话场景业务闭环；负责知识库系统的日常运维与功能优化，基于业务反馈评估需求优先级，落地批量上传、文件全链路跟踪等功能，持续提升系统能力与使用效率。",
+      "work": "深入调研保险业务一线痛点，结合市场趋势输出AI产品需求，主导i小诺（内部系统）**“保单查询-催办”、“保全试算”、“优化知识库”等**功能的PRD编写及跨系统接口**方案设计**；统筹项目从立项到上线验收的**全流程管理**，协调研发、测试及业务资源，对接**7个业务系统**，推动数据与功能集成至i小诺AI问答平台，实现对话场景业务闭环；负责知识库系统的**日常运维**与**功能优化**，基于业务反馈评估需求优先级，落地批量上传、文件全链路跟踪等功能，持续提升系统能力与使用效率。",
       "start": "2026.01",
       "end": "2026.09",
       "sort": 2
@@ -28,7 +24,7 @@
       "id": 1,
       "name": "深圳市智慧建筑创新有限公司",
       "position": "AIGC产品经理 / 数据运维",
-      "work": "作为项目负责人，根据业务需求对比市面模型，制定合适的AI-Agent方案；建立AI角色、编写并测试提示词、搭建工作流以达成业务效果，并通过用户使用反馈持续优化。同时负责“福i企”小程序日常运营、小散系统数据AI构建及数据运维，从Mysql数据库导出数据并制成周报、月报，并根据用户反馈维护小程序数据、指导用户操作。",
+      "work": "作为项目负责人，根据业务需求对比市面模型，制定合适的AI-Agent方案；建立AI角色、编写并测试**提示词**、**搭建工作流**以达成业务效果，并通过用户使用反馈持续优化。同时负责“福i企”小程序日常运营、小散系统数据**AI构建及数据运维**，从Mysql数据库导出数据并制成周报、月报，并根据用户反馈维护小程序数据、指导用户操作。",
       "start": "2023.04",
       "end": "2025.03",
       "sort": 1
@@ -44,15 +40,13 @@
         "知识问答",
         "跨系统对接"
       ],
-      "background": "为提高一线保险工作者的咨询效率，缓解客服电话接线压力，推动将部分传统电话业务迁移至 AI 问答渠道，实现“咨询 + 业务办理”一体化的 AI 服务能力。",
-      "responsibility": "深入一线业务场景，收集并确认“保单业务查询-催办”“保全试算”等核心业务需求，完成需求分析、功能拆解与 PRD 撰写；主导对接公司内部 7 个业务系统，梳理跨系统数据链路与接口依赖，将业务数据与功能融入 i 小诺 AI 问答平台，实现 AI 对话场景下的保单查询、催办及保全试算等业务操作闭环；负责项目从立项、需求评审、开发联调到上线验收的全流程推进，协调研发、测试及多方业务资源，把控关键里程碑。",
+      "background": "为提高一线保险工作者的咨询效率，**缓解**客服电话**接线压力**，推动将部分传统电话业务迁移至 AI 问答渠道，实现“咨询 + 业务办理”一体化的 AI 服务能力。",
+      "responsibility": "深入一线业务场景，收集并确认“保单业务查询-催办”“保全试算”等核心业务需求，完成**需求分析、功能拆解与 PRD 撰写**；主导对接公司内部 7 个业务系统，梳理跨系统数据链路与接口依赖，将业务数据与功能融入 i 小诺 AI 问答平台，实现 AI 对话场景下的保单查询、催办及保全试算等业务操作闭环；负责项目从**立项、需求评审、开发联调到上线验收**的全流程推进，协调研发、测试及多方业务资源，把控关键里程碑。",
       "achievement": "功能成功上线验收并推动业务规模化使用，上线后该类业务功能在 AI 咨询量中占据显著比重，持续分担客服电话接线压力。",
       "detail": "#",
       "start": "2026.01",
       "end": "2026.09",
-      "images": [
-        "https://placehold.co/800x600/e6f3fc/2377b9?text=i小诺+-1"
-      ]
+      "images": []
     },
     {
       "id": 2,
@@ -63,15 +57,13 @@
         "AI问答",
         "知识运维"
       ],
-      "background": "在公司现有知识库系统的基础上，维护知识库系统的正常使用，并为AI问答做知识支撑，提升知识存储效率和AI问答准确率。",
-      "responsibility": "根据业务需求持续优化知识库系统功能，上线知识批量上传、知识上传到发布全链路跟踪、知识解析失败追踪等功能；根据业务在AI问答上的咨询反馈定位问题，及时反馈业务做知识补足及维护，并协助推动知识库面向公司全员使用。",
+      "background": "在公司现有知识库系统的基础上，**维护知识库**系统的正常使用，并为AI问答做知识支撑，提升知识存储效率和AI问答准确率。",
+      "responsibility": "根据业务需求持续优化知识库系统功能，上线**知识批量上传**、**知识上传到发布全链路跟踪**、**知识解析失败追踪**等功能；根据业务在AI问答上的咨询反馈定位问题，及时反馈业务做知识补足及维护，并协助推动知识库面向公司全员使用。",
       "achievement": "做到从1天1000+文件到小时内上传解析1000+文件的量级提升，并协助推动公司上下10+个部门集中使用公司知识库及AI问答协同办公。",
       "detail": "#",
       "start": "2026.01",
       "end": "2026.09",
-      "images": [
-        "https://placehold.co/800x600/e6f3fc/2377b9?text=知识库-1"
-      ]
+      "images": []
     },
     {
       "id": 3,
@@ -81,14 +73,14 @@
         "多模态",
         "安全生产"
       ],
-      "background": "为提高施工人员的安全意识，针对工人上传的图片进行检测，做出各项存在安全隐患的提示，提醒施工人员及时进行防范，降低安全事故发生概率。",
-      "responsibility": "收集日常施工场地中存在的隐患内容，将数据整理归档，并进行需求评审确定需求与功能呈现形式；应用多模态模型构建2套方案并分别进行结果对比测试，根据测试结果确定最终使用方案；编写prompt，制作中间件处理中间节点数据内容，并链接成完整工作流生成API接口。",
+      "background": "为提高施工人员的安全意识，针对工人上传的图片进行检测，做出各项存在安全隐患的提示，从而提醒检查人员施工现场可能存在的隐患，做到隐患及时提示，降低安全事故发生概率。",
+      "responsibility": "收集日常施工场地中存在的隐患内容，将**数据整理归档**，并进行需求评审确定需求与功能呈现形式；应用多模态模型构建2套方案并分别进行结果**对比测试**，根据测试结果确定最终使用方案；编写prompt，制作中间件处理中间节点数据内容，并链接成完整**工作流**生成**API接口**。",
       "achievement": "在业务小程序中上线并使用，提高了住建对工程风险的管理效率，获得福田区住房和建设局的大力支持和推动。",
       "detail": "https://www.sznews.com/news/content/mb/2025-04/08/content_31530759.htm",
       "start": "2025.01",
       "end": "2025.03",
       "images": [
-        "https://placehold.co/800x600/e6f3fc/2377b9?text=巡检AI-1"
+        "https://yft.fdpc.xyz/eyJmaWxlX2lkIjoiQlFBQ0FnVUFBeUVHQUFNQkE4T1hfZ0FDQ01scXYzVFlOUHltSnBLd1FYamFMX09IdW9pMHlnQUNYeUFBQWhnckFWWlo1TDhVZ0kxMWZqMEUiLCJtZXNzYWdlX2lkIjoyMjQ5fQ.png"
       ]
     },
     {
@@ -107,7 +99,7 @@
       "start": "2024.05",
       "end": "2024.12",
       "images": [
-        "https://placehold.co/800x600/e6f3fc/2377b9?text=数据问答-1"
+        "https://yft.fdpc.xyz/eyJmaWxlX2lkIjoiQlFBQ0FnVUFBeUVHQUFNQkE4T1hfZ0FDQ01acXYzVFNHLWJWV2tkR1J2QWVHVHVqNDdjLWRnQUNYQ0FBQWhnckFWYl9HbDl0M0tjdFR6MEUiLCJtZXNzYWdlX2lkIjoyMjQ2fQ.jpg","https://yft.fdpc.xyz/eyJmaWxlX2lkIjoiQlFBQ0FnVUFBeUVHQUFNQkE4T1hfZ0FDQ01WcXYzVFNETzgzNmRNWVh3V1MyVWFEMVZ3OG9BQUNXeUFBQWhnckFWWUpkQnBqX19oaDhUMEUiLCJtZXNzYWdlX2lkIjoyMjQ1fQ.jpg","https://yft.fdpc.xyz/eyJmaWxlX2lkIjoiQlFBQ0FnVUFBeUVHQUFNQkE4T1hfZ0FDQ01ScXYzVFNhdTlQQjkyY05KWFNwa1VNUjhsLWNRQUNXaUFBQWhnckFWYnk3MmFITnhnZ2l6MEUiLCJtZXNzYWdlX2lkIjoyMjQ0fQ.jpg","https://yft.fdpc.xyz/eyJmaWxlX2lkIjoiQlFBQ0FnVUFBeUVHQUFNQkE4T1hfZ0FDQ01kcXYzVFNJRGhERU5zckJHTGN3Z1lxZTdJNzdBQUNYU0FBQWhnckFWYkoxTDFUSDZyWVJqMEUiLCJtZXNzYWdlX2lkIjoyMjQ3fQ.jpg"
       ]
     },
     {
@@ -125,7 +117,7 @@
       "start": "2024.05",
       "end": "2025.01",
       "images": [
-        "https://placehold.co/800x600/e6f3fc/2377b9?text=备案审核-1"
+        "https://yft.fdpc.xyz/eyJmaWxlX2lkIjoiQlFBQ0FnVUFBeUVHQUFNQkE4T1hfZ0FDQ01wcXYzVFo1Sm1Ua2h2cGpsWnd1dFlYSk9NRldRQUNZQ0FBQWhnckFWWU9mOEo3VllENlFqMEUiLCJtZXNzYWdlX2lkIjoyMjUwfQ.png"
       ]
     },
     {
@@ -143,7 +135,7 @@
       "start": "2024.04",
       "end": "2024.06",
       "images": [
-        "https://placehold.co/800x600/e6f3fc/2377b9?text=业务问答-1"
+        "https://yft.fdpc.xyz/eyJmaWxlX2lkIjoiQlFBQ0FnVUFBeUVHQUFNQkE4T1hfZ0FDQ01ocXYzVFQxUXl4d0dJOXhoZ1lxVm5sM0xzU1FnQUNYaUFBQWhnckFWYlhydDdLdTFUWFl6MEUiLCJtZXNzYWdlX2lkIjoyMjQ4fQ.png"
       ]
     }
   ],
