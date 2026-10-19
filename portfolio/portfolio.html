@@ -6,7 +6,7 @@
 <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
 <meta http-equiv="Pragma" content="no-cache">
 <meta http-equiv="Expires" content="0">
-<title>XXX · 个人作品集</title>
+<title>XXX-个人作品集</title>
 <link rel="preconnect" href="https://cdn.jsdelivr.net">
 <link href="https://cdn.jsdelivr.net/npm/inter-ui@3.19.3/inter.css" rel="stylesheet">
 <style>
@@ -598,6 +598,8 @@ function renderAvatar(per) {
 
 function render() {
   const per = DATA.person;
+  const displayName = per.name && per.name.trim() ? per.name.trim() : "XXX";
+  document.title = `${displayName}-个人作品集`;
   renderAvatar(per);
   document.getElementById("p-name").textContent = per.name;
   document.getElementById("p-job").textContent = per.job;
