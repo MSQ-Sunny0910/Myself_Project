@@ -219,10 +219,12 @@
   .project-card.open .p-chevron { transform: rotate(180deg); }
 
   .project-body {
-    max-height: 0; overflow: hidden; transition: max-height .35s ease;
+    display: grid; grid-template-rows: 0fr;
+    transition: grid-template-rows .35s ease;
   }
-  .project-card.open .project-body { max-height: 700px; }
+  .project-card.open .project-body { grid-template-rows: 1fr; }
   .project-body-inner {
+    min-height: 0; overflow: hidden;
     padding-top: 20px; margin-top: 20px;
     border-top: 1px solid var(--line);
     display: flex; gap: 24px; flex-wrap: wrap;
