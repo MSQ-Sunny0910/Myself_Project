@@ -251,7 +251,8 @@
   }
   .p-thumb img {
     max-width: 100%; max-height: 100%; object-fit: contain;
-    position: absolute; top: 0; left: 0;
+    position: absolute; top: 50%; left: 50%;
+    transform: translate(-50%, -50%);
     opacity: 0; transition: opacity 0.5s ease;
   }
   .p-thumb img.active { opacity: 1; }
@@ -276,8 +277,11 @@
     opacity: 0; pointer-events: none; transition: opacity .2s;
   }
   .lightbox-overlay.active { opacity: 1; pointer-events: auto; }
-  .lightbox-wrap { position: relative; max-width: 90vw; max-height: 90vh; }
-  .lightbox-wrap img { max-width: 100%; max-height: 86vh; border-radius: 8px; box-shadow: 0 20px 60px rgba(0,0,0,.3); }
+  .lightbox-wrap {
+    position: relative; max-width: 90vw; max-height: 90vh;
+    display: flex; align-items: center; justify-content: center;
+  }
+  .lightbox-wrap img { max-width: 100%; max-height: 86vh; border-radius: 8px; box-shadow: 0 20px 60px rgba(0,0,0,.3); object-fit: contain; }
   .lightbox-close, .lightbox-prev, .lightbox-next {
     position: absolute; background: rgba(255,255,255,.15); border: none;
     color: #fff; cursor: pointer; border-radius: 50%;
