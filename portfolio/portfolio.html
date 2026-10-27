@@ -294,8 +294,8 @@
   }
   .lightbox-close:hover, .lightbox-prev:hover, .lightbox-next:hover { background: rgba(255,255,255,.3); }
   .lightbox-close { top: -52px; right: 0; }
-  .lightbox-prev { left: -60px; top: 50%; transform: translateY(-50%); }
-  .lightbox-next { right: -60px; top: 50%; transform: translateY(-50%); }
+  .lightbox-prev { left: 20px; top: 50%; transform: translateY(-50%); }
+  .lightbox-next { right: 20px; top: 50%; transform: translateY(-50%); }
   .lightbox-counter { position: absolute; bottom: -36px; left: 50%; transform: translateX(-50%); color: #fff; font-size: 14px; }
 
   /* ========== 页脚 ========== */
@@ -404,13 +404,13 @@
 </footer>
 
 <div class="lightbox-overlay" id="lightbox" onclick="closeLightbox(event)">
+  <button class="lightbox-prev" onclick="prevImage(); event.stopPropagation();" aria-label="上一张">‹</button>
   <div class="lightbox-wrap" onclick="event.stopPropagation()">
     <button class="lightbox-close" onclick="closeLightbox()" aria-label="关闭">✕</button>
-    <button class="lightbox-prev" onclick="prevImage()" aria-label="上一张">‹</button>
     <img id="lightbox-img" src="" alt="">
-    <button class="lightbox-next" onclick="nextImage()" aria-label="下一张">›</button>
     <div class="lightbox-counter" id="lightbox-counter"></div>
   </div>
+  <button class="lightbox-next" onclick="nextImage(); event.stopPropagation();" aria-label="下一张">›</button>
 </div>
 
 <script>
@@ -484,7 +484,7 @@ function startThumbCarousel() {
       const nextIdx = (activeIdx + 1) % slides.length;
       slides[nextIdx].classList.add("active");
     });
-  }, 2000);
+  }, 5000);
 }
 
 function adjustThumbSizes() {
