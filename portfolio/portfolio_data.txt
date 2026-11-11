@@ -1,7 +1,7 @@
 {
   "person": {
     "name": "马思琪",
-    "avatar": "https://yft.fdpc.xyz/eyJmaWxlX2lkIjoiQlFBQ0FnVUFBeUVHQUFNQkE4T1hfZ0FDQ2ZocTFjbWJya0ZQZHItZ3duUmhicEx4azFPZ3FBQUN2eWNBQXJEV3NWWjliemZ0MWdZMUh6MEUiLCJtZXNzYWdlX2lkIjoyNTUyfQ.png",
+    "avatar": "https://project-1331283061.cos.ap-shenzhen-fsi.myqcloud.com/imgs/project120261111150252086.png",
     "job": "AI产品经理",
     "school": "北京师范大学珠海分校 · 计算机科学与技术本科 GPA3.3（专业前20/120）",
     "major": "计算机科学与技术",
@@ -80,7 +80,7 @@
       "start": "2025.01",
       "end": "2025.03",
       "images": [
-        "https://yft.fdpc.xyz/eyJmaWxlX2lkIjoiQlFBQ0FnVUFBeUVHQUFNQkE4T1hfZ0FDQ01scXYzVFlOUHltSnBLd1FYamFMX09IdW9pMHlnQUNYeUFBQWhnckFWWlo1TDhVZ0kxMWZqMEUiLCJtZXNzYWdlX2lkIjoyMjQ5fQ.png"
+        "https://project-1331283061.cos.ap-shenzhen-fsi.myqcloud.com/imgs/project120261111150232025.png"
       ]
     },
     {
@@ -99,7 +99,8 @@
       "start": "2024.05",
       "end": "2024.12",
       "images": [
-        "https://yft.fdpc.xyz/eyJmaWxlX2lkIjoiQlFBQ0FnVUFBeUVHQUFNQkE4T1hfZ0FDQ01acXYzVFNHLWJWV2tkR1J2QWVHVHVqNDdjLWRnQUNYQ0FBQWhnckFWYl9HbDl0M0tjdFR6MEUiLCJtZXNzYWdlX2lkIjoyMjQ2fQ.jpg","https://yft.fdpc.xyz/eyJmaWxlX2lkIjoiQlFBQ0FnVUFBeUVHQUFNQkE4T1hfZ0FDQ01WcXYzVFNETzgzNmRNWVh3V1MyVWFEMVZ3OG9BQUNXeUFBQWhnckFWWUpkQnBqX19oaDhUMEUiLCJtZXNzYWdlX2lkIjoyMjQ1fQ.jpg","https://yft.fdpc.xyz/eyJmaWxlX2lkIjoiQlFBQ0FnVUFBeUVHQUFNQkE4T1hfZ0FDQ01ScXYzVFNhdTlQQjkyY05KWFNwa1VNUjhsLWNRQUNXaUFBQWhnckFWYnk3MmFITnhnZ2l6MEUiLCJtZXNzYWdlX2lkIjoyMjQ0fQ.jpg","https://yft.fdpc.xyz/eyJmaWxlX2lkIjoiQlFBQ0FnVUFBeUVHQUFNQkE4T1hfZ0FDQ01kcXYzVFNJRGhERU5zckJHTGN3Z1lxZTdJNzdBQUNYU0FBQWhnckFWYkoxTDFUSDZyWVJqMEUiLCJtZXNzYWdlX2lkIjoyMjQ3fQ.jpg"
+        "https://project-1331283061.cos.ap-shenzhen-fsi.myqcloud.com/imgs/project120261111150232066.jpg","https://project-1331283061.cos.ap-shenzhen-fsi.myqcloud.com/imgs/project120261111150231948.jpg",
+        "https://project-1331283061.cos.ap-shenzhen-fsi.myqcloud.com/imgs/project120261111150231853.jpg","https://project-1331283061.cos.ap-shenzhen-fsi.myqcloud.com/imgs/project120261111150231894.jpg"
       ]
     },
     {
@@ -135,7 +136,7 @@
       "start": "2024.04",
       "end": "2024.06",
       "images": [
-        "https://yft.fdpc.xyz/eyJmaWxlX2lkIjoiQlFBQ0FnVUFBeUVHQUFNQkE4T1hfZ0FDQ01ocXYzVFQxUXl4d0dJOXhoZ1lxVm5sM0xzU1FnQUNYaUFBQWhnckFWYlhydDdLdTFUWFl6MEUiLCJtZXNzYWdlX2lkIjoyMjQ4fQ.png"
+        "https://project-1331283061.cos.ap-shenzhen-fsi.myqcloud.com/imgs/project120261111150231983.png"
       ]
     }
   ],
